@@ -1,7 +1,13 @@
 // Imports: Dependencies
 const express = require('express');
+const connectDb = require('./Config/dbConnection');
 const dotenv = require('dotenv').config();
 const errorHandler = require('./middleware/errorHandler');
+
+// Connect to MongoDB
+connectDb().then(() => {
+    console.log("MongoDB connected");
+});
 
 // Routes
 const app = express();
