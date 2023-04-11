@@ -5,9 +5,7 @@ const dotenv = require('dotenv').config();
 const errorHandler = require('./middleware/errorHandler');
 
 // Connect to MongoDB
-connectDb().then(() => {
-    console.log("MongoDB connected");
-});
+connectDb();
 
 // Routes
 const app = express();
